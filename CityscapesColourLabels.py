@@ -93,7 +93,7 @@ print(torch.cuda.get_device_properties(device))
 # !unzip '/content/drive/MyDrive/archive.zip'
 
 batch_size = 32
-num_classes = 19
+num_classes = 20
 
 data_dir = '/content/cityscapes_data/'
 train_dir = os.path.join(data_dir, "train") 
