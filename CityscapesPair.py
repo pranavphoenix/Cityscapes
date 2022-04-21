@@ -220,7 +220,7 @@ for epoch in tqdm(range(epochs)):
     test_losses.append(test)
     mIoU = mIoU.cpu().detach()
     miou.append(mIoU)
-    print(f"Epoch : {epoch+1} - train loss : {epoch_loss:.4f} - test loss: {test_loss:.4f} - MIOU: {mIoU:.4f} - Time: {time.time() - t0:.4f}\n")
+    print(f"Epoch : {epoch+1} - train loss : {epoch_loss:.4f} - test loss: {test_loss:.4f} - MIOU: {mIoU:.4f} - Train Time: {t1 - t0:.2f} - Test Time: {time.time() - t1:.2f}\n")
     if mIoU >= max(miou):
         PATH = 'WaveMix256Citypair.pth'
         torch.save(model.state_dict(), PATH)
